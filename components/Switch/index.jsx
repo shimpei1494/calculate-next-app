@@ -1,9 +1,9 @@
 import style from './Switch.module.css';
 
-
 export function Switch(props) {
+  // クリックで数や演算子を文字列に追加
   const handleClick = () => {
-    props.setDisplay(props.num)
+    props.setDisplay(props.display + props.num)
   };
 
   return (

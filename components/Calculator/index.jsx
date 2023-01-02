@@ -1,22 +1,47 @@
 import { useState } from 'react';
 import { Switch } from '../Switch';
+import { Equal } from '../Switch/equal';
 import style from './Calculator.module.css';
 
-const NUMBERS = [1,2,3,4,5,6,7,8,9,0];
+const NUMBERS = ["1","2","3","4","5","6","7","8","9","0","."];
+const SIGNS = ["+","×","-","÷"]
 
 
 export function Calculator() {
-  const [display, setDisplay] = useState();
+  // 計算式表示state
+  const [display, setDisplay] = useState("");
+  // 答え出力state
+  const [answer, setAnswer] = useState();
+
+
   return (
-    <div>
-      <h4>計算用コンポーネント</h4>
-      <p>{display}</p>
-      <div className={style.numGrid}>
-        {NUMBERS.map((number) => {
-          return (
-            <Switch num={number} setDisplay={setDisplay} key={number}/>
-          );
-        })}
+    <div className={style.container}>
+      <p>計算式</p>
+      <div className={style.calcWrapper}>
+        {display}
+      </div>
+      <p>答え</p>
+      <div className={style.calcWrapper}>
+        {answer}
+      </div>
+      <div className={style.btnDisplayWrapper}>
+        {/* 数値と= */}
+        <div className={style.numGrid}>
+          {NUMBERS.map((number) => {
+            return (
+              <Switch num={number} display={display} setDisplay={setDisplay} key={number}/>
+            );
+          })}
+          <Equal display={display} setAnswer={setAnswer}/>
+        </div>
+        {/* 演算子 */}
+        <div className={style.signGrid}>
+          {SIGNS.map((sign) => {
+            return (
+              <Switch num={sign} display={display} setDisplay={setDisplay} key={sign}/>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

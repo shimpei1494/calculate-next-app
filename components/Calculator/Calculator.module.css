@@ -1,4 +1,24 @@
+/* .container {
+} */
+
+.btnDisplayWrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
 .numGrid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.signGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.calcWrapper {
+  margin: 0.5rem;
+  height: 3rem;
+  width: 1fr;
+  background-color: gray;
 }
