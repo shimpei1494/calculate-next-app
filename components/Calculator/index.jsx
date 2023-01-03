@@ -8,10 +8,19 @@ import style from './Calculator.module.css';
 const NUMBERS = ["(",")","%","1","2","3","4","5","6","7","8","9","0","."];
 const SIGNS = ["+","×","-","÷"]
 
+const realDisplay = (str) => {
+  let real = str
+  real = real.replace(/\*\*/g, '^');
+  real = real.replace(/\*/g, '×');
+  real = real.replace(/\//g, '÷');
+  return real;
+}
+
 
 export function Calculator() {
   // 計算式表示state
   const [display, setDisplay] = useState("");
+  // let realDisplay = display
   // 答え出力state
   const [answer, setAnswer] = useState();
 
@@ -20,7 +29,7 @@ export function Calculator() {
     <div className={style.container}>
       <p>計算式</p>
       <div className={style.calcWrapper}>
-        {display}
+        {realDisplay(display)}
       </div>
       <p>答え</p>
       <div className={style.calcWrapper}>
