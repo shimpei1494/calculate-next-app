@@ -3,7 +3,8 @@ import { Switch } from '../Switch';
 import { Equal } from '../Switch/equal';
 import style from './Calculator.module.css';
 
-const NUMBERS = ["1","2","3","4","5","6","7","8","9","0","."];
+// ただ文字列を追加するだけのボタンはまとめる
+const NUMBERS = ["(",")","%","1","2","3","4","5","6","7","8","9","0","."];
 const SIGNS = ["+","×","-","÷"]
 
 
@@ -25,7 +26,6 @@ export function Calculator() {
         {answer}
       </div>
       <div className={style.btnDisplayWrapper}>
-        {/* 数値と= */}
         <div className={style.numGrid}>
           {NUMBERS.map((number) => {
             return (
@@ -34,11 +34,10 @@ export function Calculator() {
           })}
           <Equal display={display} setAnswer={setAnswer}/>
         </div>
-        {/* 演算子 */}
         <div className={style.signGrid}>
           {SIGNS.map((sign) => {
             return (
-              <Switch num={sign} display={display} setDisplay={setDisplay} key={sign}/>
+              <Switch num={sign} display={display} setDisplay={setDisplay} key={sign} type="sign"/>
             );
           })}
         </div>
