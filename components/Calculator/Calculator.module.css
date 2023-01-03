@@ -21,4 +21,6 @@
   height: 3rem;
   width: 1fr;
   background-color: gray;
+  display: flex;
+  align-items: center;
 }
