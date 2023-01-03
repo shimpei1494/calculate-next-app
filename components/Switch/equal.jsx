@@ -3,8 +3,11 @@ import style from './Switch.module.css';
 export function Equal(props) {
   // クリックでdisplayの文字列を計算して出力
   const handleClick = () => {
-    console.log(eval(props.display));
-    props.setAnswer(eval(props.display))
+    try {
+      props.setAnswer(eval(props.display))
+    } catch (e){
+      alert(`計算式が正しいか確認してください。\n${e}`);
+    }
   };
 
   return (
