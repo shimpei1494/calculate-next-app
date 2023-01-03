@@ -21,7 +21,6 @@ const realDisplay = (str) => {
 export function Calculator() {
   // 計算式表示state
   const [display, setDisplay] = useState("");
-  // let realDisplay = display
   // 答え出力state
   const [answer, setAnswer] = useState();
 
