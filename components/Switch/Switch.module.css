@@ -11,3 +11,7 @@
 .equal:hover{
   background-color: rgba(255, 99, 71, 1);
 }
+
+.delete {
+  font-size: 0.7rem;
+}

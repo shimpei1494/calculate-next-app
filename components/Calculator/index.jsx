@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Switch } from '../Switch';
 import { Clear } from '../Switch/clear';
+import { Delete } from '../Switch/delete';
 import { Equal } from '../Switch/equal';
 import style from './Calculator.module.css';
 
@@ -34,6 +35,9 @@ export function Calculator() {
       <p>答え</p>
       <div className={style.calcWrapper}>
         {answer}
+      </div>
+      <div>
+        <Delete setDisplay={setDisplay} display={display} setAnswer={setAnswer}/>
       </div>
       <div className={style.btnDisplayWrapper}>
         <div className={style.numGrid}>
