@@ -36,7 +36,7 @@ export function Calculator() {
       <div className={style.calcWrapper}>
         {answer}
       </div>
-      <div>
+      <div className={style.deletePosition}>
         <Delete setDisplay={setDisplay} display={display} setAnswer={setAnswer}/>
       </div>
       <div className={style.btnDisplayWrapper}>

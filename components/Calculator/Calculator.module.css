@@ -24,3 +24,8 @@
   display: flex;
   align-items: center;
 }
+
+.deletePosition {
+  display: flex;
+  justify-content: flex-end;
+}
