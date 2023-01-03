@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Switch } from '../Switch';
+import { Clear } from '../Switch/clear';
 import { Equal } from '../Switch/equal';
 import style from './Calculator.module.css';
 
@@ -35,6 +36,9 @@ export function Calculator() {
           <Equal display={display} setAnswer={setAnswer}/>
         </div>
         <div className={style.signGrid}>
+          {/* クリアボタン */}
+          <Clear setDisplay={setDisplay} setAnswer={setAnswer}/>
+          {/* 主に演算子類 */}
           {SIGNS.map((sign) => {
             return (
               <Switch num={sign} display={display} setDisplay={setDisplay} key={sign} type="sign"/>
