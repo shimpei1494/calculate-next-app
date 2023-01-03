@@ -7,9 +7,9 @@ export default function Home() {
     <>
       <Head>
         <title>電卓アプリ</title>
-        <meta name="description" content="簡易計算用のアプリケーションです" />
+        <meta name="description" content="簡易計算用の電卓アプリケーションです" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/calc_icon.jpeg" />
       </Head>
       
       <main className={style.main}>
