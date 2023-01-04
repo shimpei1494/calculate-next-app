@@ -5,8 +5,10 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  background-color: black;
 }
 
 .title {
   text-decoration:underline;
+  color: white;
 }

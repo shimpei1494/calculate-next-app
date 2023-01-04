@@ -2,6 +2,11 @@
   height: 3rem;
   width: 3rem;
   margin: 0.5rem;
+  background-color: rgb(186, 186, 186);
+}
+
+.btn:hover {
+  background-color: rgb(222, 222, 222);
 }
 
 .equal {

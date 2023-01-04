@@ -1,7 +1,7 @@
 .container {
   margin-top: 3rem;
   padding: 1rem;
-  border: solid;
+  border: solid white;
 }
 
 .btnDisplayWrapper {
@@ -23,7 +23,7 @@
   margin: 0.5rem;
   height: 3rem;
   width: 1fr;
-  background-color: gray;
+  background-color: rgb(186, 186, 186);
   display: flex;
   align-items: center;
 }
